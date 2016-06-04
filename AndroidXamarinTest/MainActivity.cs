@@ -26,6 +26,12 @@ namespace AndroidXamarinTest
 
 			button.Click += delegate { button.Text = string.Format("{0} clicks!", count++); };
 		}
+
+		[Java.Interop.Export("OnClickButton1")]
+		public void OnClickButton1(View v)
+		{
+			Toast.MakeText(this, "1 desu", ToastLength.Short).Show();
+		}
 	}
 }
 
